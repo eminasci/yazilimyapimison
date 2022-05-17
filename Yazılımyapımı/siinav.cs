@@ -15,6 +15,7 @@ namespace Yazılımyapımı
 {
     public partial class siinav : Form
     {
+        int dakika = 1, saniye =60 ;
         public siinav()
         {
             InitializeComponent();
@@ -63,6 +64,16 @@ namespace Yazılımyapımı
 
         private void siinav_Load(object sender, EventArgs e)
         {
+            timer1.Interval = 60000;
+            timer2.Interval = 1000;
+           
+            label3.Text = "0";
+            timer1.Start(); timer2.Start();
+           
+
+
+
+
             MessageBox.Show("x="+x.ToString());
             sinav_ogr_id = yogr.id;
            // MessageBox.Show(z.ToString());
@@ -232,6 +243,31 @@ namespace Yazılımyapımı
             conn.Close();
 
         }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            if(dakika==0)
+            {
+                MessageBox.Show("Süreniz bitti sonuç ekranına yönlendiriliyorsunuz");
+                sinavbitir();
+
+            }
+            label2.Text = dakika.ToString();
+            dakika--;
+           
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            if(saniye==0)
+            {
+                saniye = 60;
+            }
+            label3.Text = saniye.ToString();
+            label2.Text = dakika.ToString();
+            saniye--;
+        }
+
         public void  RadioButunSifirla()
         {
             cevapA.Checked = false;

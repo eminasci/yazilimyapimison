@@ -29,6 +29,7 @@ namespace Yazılımyapımı
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.nextbutton = new System.Windows.Forms.Button();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.cevapA = new System.Windows.Forms.RadioButton();
@@ -36,14 +37,20 @@ namespace Yazılımyapımı
             this.cevapC = new System.Windows.Forms.RadioButton();
             this.cevapD = new System.Windows.Forms.RadioButton();
             this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.lblortasaat = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // nextbutton
             // 
-            this.nextbutton.Location = new System.Drawing.Point(596, 391);
+            this.nextbutton.Location = new System.Drawing.Point(511, 318);
+            this.nextbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nextbutton.Name = "nextbutton";
-            this.nextbutton.Size = new System.Drawing.Size(133, 38);
+            this.nextbutton.Size = new System.Drawing.Size(114, 31);
             this.nextbutton.TabIndex = 0;
             this.nextbutton.Text = "NEXT SORU";
             this.nextbutton.UseVisualStyleBackColor = true;
@@ -52,17 +59,19 @@ namespace Yazılımyapımı
             // pictureBox1
             // 
             this.pictureBox1.Location = new System.Drawing.Point(1, 1);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(638, 318);
+            this.pictureBox1.Size = new System.Drawing.Size(547, 258);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
             // 
             // cevapA
             // 
             this.cevapA.AutoSize = true;
-            this.cevapA.Location = new System.Drawing.Point(64, 337);
+            this.cevapA.Location = new System.Drawing.Point(55, 274);
+            this.cevapA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cevapA.Name = "cevapA";
-            this.cevapA.Size = new System.Drawing.Size(37, 21);
+            this.cevapA.Size = new System.Drawing.Size(32, 17);
             this.cevapA.TabIndex = 2;
             this.cevapA.TabStop = true;
             this.cevapA.Text = "A";
@@ -71,9 +80,10 @@ namespace Yazılımyapımı
             // cevapB
             // 
             this.cevapB.AutoSize = true;
-            this.cevapB.Location = new System.Drawing.Point(179, 337);
+            this.cevapB.Location = new System.Drawing.Point(153, 274);
+            this.cevapB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cevapB.Name = "cevapB";
-            this.cevapB.Size = new System.Drawing.Size(37, 21);
+            this.cevapB.Size = new System.Drawing.Size(32, 17);
             this.cevapB.TabIndex = 3;
             this.cevapB.TabStop = true;
             this.cevapB.Text = "B";
@@ -82,9 +92,10 @@ namespace Yazılımyapımı
             // cevapC
             // 
             this.cevapC.AutoSize = true;
-            this.cevapC.Location = new System.Drawing.Point(63, 400);
+            this.cevapC.Location = new System.Drawing.Point(54, 325);
+            this.cevapC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cevapC.Name = "cevapC";
-            this.cevapC.Size = new System.Drawing.Size(38, 21);
+            this.cevapC.Size = new System.Drawing.Size(32, 17);
             this.cevapC.TabIndex = 4;
             this.cevapC.TabStop = true;
             this.cevapC.Text = "C";
@@ -93,9 +104,10 @@ namespace Yazılımyapımı
             // cevapD
             // 
             this.cevapD.AutoSize = true;
-            this.cevapD.Location = new System.Drawing.Point(177, 400);
+            this.cevapD.Location = new System.Drawing.Point(152, 325);
+            this.cevapD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cevapD.Name = "cevapD";
-            this.cevapD.Size = new System.Drawing.Size(39, 21);
+            this.cevapD.Size = new System.Drawing.Size(33, 17);
             this.cevapD.TabIndex = 5;
             this.cevapD.TabStop = true;
             this.cevapD.Text = "D";
@@ -104,17 +116,55 @@ namespace Yazılımyapımı
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(728, 59);
+            this.label1.Location = new System.Drawing.Point(624, 48);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 17);
+            this.label1.Size = new System.Drawing.Size(35, 13);
             this.label1.TabIndex = 6;
             this.label1.Text = "label1";
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(583, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "label2";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(639, 9);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "label3";
+            // 
+            // lblortasaat
+            // 
+            this.lblortasaat.AutoSize = true;
+            this.lblortasaat.Location = new System.Drawing.Point(624, 9);
+            this.lblortasaat.Name = "lblortasaat";
+            this.lblortasaat.Size = new System.Drawing.Size(10, 13);
+            this.lblortasaat.TabIndex = 9;
+            this.lblortasaat.Text = ":";
+            // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // timer2
+            // 
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
+            // 
             // siinav
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(686, 366);
+            this.Controls.Add(this.lblortasaat);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.cevapD);
             this.Controls.Add(this.cevapC);
@@ -122,6 +172,7 @@ namespace Yazılımyapımı
             this.Controls.Add(this.cevapA);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.nextbutton);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "siinav";
             this.Text = "siinav";
             this.Load += new System.EventHandler(this.siinav_Load);
@@ -140,5 +191,10 @@ namespace Yazılımyapımı
         private System.Windows.Forms.RadioButton cevapC;
         private System.Windows.Forms.RadioButton cevapD;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label lblortasaat;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Timer timer2;
     }
 }
