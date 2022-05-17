@@ -14,18 +14,19 @@ namespace Yazılımyapımı
     public partial class frmUyeol : Form
     {
 
-        SqlConnection connection = girisekrani.baglanti;
+        SqlConnection connection = FrmGirisekrani.baglanti;
 
         public frmUyeol()
         {
             InitializeComponent();
         }
+        
         static string constring = ("Data Source=.;Initial Catalog=yazılımyapımı;Integrated Security=True;");
         SqlConnection baglan = new SqlConnection(constring);
         private void cikisBttn_Click(object sender, EventArgs e)
         {
-            girisekrani formgirisekrani = new girisekrani();
-            formgirisekrani.Show();
+            frmAnaekran frmAnaekran = new frmAnaekran();
+           frmAnaekran.Show();
             this.Hide();
         }
 
@@ -36,18 +37,31 @@ namespace Yazılımyapımı
                 if (baglan.State == ConnectionState.Closed)
                 {
                     baglan.Open();
-                    string Rez = "insert into kullanici (email,şifre,soru,cevap)values(@email,@şifre,@soru,@cevap)";
+                    //string Rez = "insert into kullanici (email,şifre,soru,cevap)values(@email,@şifre,@soru,@cevap)";
+
+                    //SqlCommand komut = new SqlCommand(Rez, baglan);
+                    //komut.Parameters.AddWithValue("@email", emailTxtbox.Text);
+                    //komut.Parameters.AddWithValue("@şifre", sifreTxtbox.Text);
+                    //komut.Parameters.AddWithValue("@soru", soruCmbbox.Text);
+                    //komut.Parameters.AddWithValue("@cevap", cevapTxtbox.Text);
+                    string Rez = "insert into ogrenci (adi,soyadi,mail,sifre,soru,cevap)values(@adi,@soyadi,@mail,@sifre,@soru,@cevap)";
 
                     SqlCommand komut = new SqlCommand(Rez, baglan);
-                    komut.Parameters.AddWithValue("@email", emailTxtbox.Text);
-                    komut.Parameters.AddWithValue("@şifre", sifreTxtbox.Text);
+                    komut.Parameters.AddWithValue("@adi", textBox1.Text);
+                    komut.Parameters.AddWithValue("@soyadi", textBox2.Text);
+                    komut.Parameters.AddWithValue("@mail", emailTxtbox.Text);
+                    komut.Parameters.AddWithValue("@sifre", sifreTxtbox.Text);
                     komut.Parameters.AddWithValue("@soru", soruCmbbox.Text);
                     komut.Parameters.AddWithValue("@cevap", cevapTxtbox.Text);
-                    
+
 
                     komut.ExecuteNonQuery();
-
+                    
                     MessageBox.Show("Kaydınız yapılmıştır.");
+                    FrmGirisekrani fge=new FrmGirisekrani();
+                    fge.Show();
+                    this.Hide();
+
                 }
             }
             catch (Exception hata)
@@ -57,6 +71,9 @@ namespace Yazılımyapımı
             }
         }
 
-       
+        private void frmUyeol_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

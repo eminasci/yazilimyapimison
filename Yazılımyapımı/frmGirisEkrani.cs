@@ -11,12 +11,16 @@ using System.Data.SqlClient;
 
 namespace Yazılımyapımı
 {
-    public partial class girisekrani : Form
+    public partial class FrmGirisekrani : Form
     {
-        public girisekrani()
+        public FrmGirisekrani()
         {
             InitializeComponent();
         }
+        //frmOgrenciAnaEkran xx = new frmOgrenciAnaEkran();
+        public frmOgrenciAnaEkran oae = new frmOgrenciAnaEkran();
+        public ogrenci xogr = new ogrenci();
+        public siinav sin = new siinav();
         public static SqlConnection baglanti = new SqlConnection("Data Source=.;Initial Catalog=yazılımyapımı;Integrated Security=True;");
         
         private void Girisyap_Bttn_Click(object sender, EventArgs e)
@@ -24,7 +28,8 @@ namespace Yazılımyapımı
             try
             {
                 baglanti.Open();
-                string sql = "Select *From kullanici where Email=@email AND Şifre=@şifre";
+                
+                string sql = "Select *From ogrenci where mail=@email AND sifre=@şifre";
                 SqlParameter prm1 = new SqlParameter("email", email_Txtbox.Text.Trim());
                 SqlParameter prm2 = new SqlParameter("şifre", sifreTxtbox.Text.Trim());
                 SqlCommand komut = new SqlCommand(sql, baglanti);
@@ -32,21 +37,25 @@ namespace Yazılımyapımı
                 komut.Parameters.Add(prm2);
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(komut);
+                //DataTable dta = new DataTable();
                 da.Fill(dt);
                 if (dt.Rows.Count>0)
                 {
-                   frmUyeol fr = new frmUyeol();
-                    fr.Show();
-
+                    string sql11 = "Select id From ogrenci where mail=@email";
+                    SqlCommand cmd = new SqlCommand(sql11, baglanti);
+                    cmd.Parameters.AddWithValue("@email", email_Txtbox.Text.Trim());
+                    xogr.id = (int)cmd.ExecuteScalar();
+                    MessageBox.Show(xogr.id.ToString());
+                    oae.ogrenc.id = xogr.id;
+                    sin.yogr = xogr;
+                    oae.Show();
+                    this.Hide();
                 }
                 else
                 {
                     MessageBox.Show("kullanıcı adı veya şifreyi yanlış girdiniz");
                 }
                 baglanti.Close();
-             
-
-
             }
             catch (Exception)
             {
@@ -54,7 +63,6 @@ namespace Yazılımyapımı
 
             }
         }
-
         private void uyeolBttn_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -70,6 +78,18 @@ namespace Yazılımyapımı
             sifremiunuttumFrm sifremiunuttumFrm= new sifremiunuttumFrm();
             sifremiunuttumFrm.Show();
             this.Hide();
+        }
+
+        private void CikisBttn_Click(object sender, EventArgs e)
+        {
+            frmAnaekran frmAnaekran = new frmAnaekran();
+            frmAnaekran.Show();
+            this.Hide();
+        }
+
+        private void FrmGirisekrani_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

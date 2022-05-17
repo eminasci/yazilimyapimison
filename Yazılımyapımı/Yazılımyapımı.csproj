@@ -47,11 +47,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="anaekran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="anaekran.Designer.cs">
+      <DependentUpon>anaekran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAdminEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminEkrani.Designer.cs">
+      <DependentUpon>frmAdminEkrani.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmGirisEkrani.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmGirisEkrani.Designer.cs">
       <DependentUpon>frmGirisEkrani.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOgrenciAnaEkran.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOgrenciAnaEkran.Designer.cs">
+      <DependentUpon>frmOgrenciAnaEkran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSinavSorumlu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSinavSorumlu.Designer.cs">
+      <DependentUpon>frmSinavSorumlu.cs</DependentUpon>
     </Compile>
     <Compile Include="frmUyeol.cs">
       <SubType>Form</SubType>
@@ -65,16 +89,49 @@
     <Compile Include="frnSifremiUnuttum.Designer.cs">
       <DependentUpon>frnSifremiUnuttum.cs</DependentUpon>
     </Compile>
+    <Compile Include="ogrenci.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="siinav.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="siinav.Designer.cs">
+      <DependentUpon>siinav.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sonuc.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="sonuc.Designer.cs">
+      <DependentUpon>sonuc.cs</DependentUpon>
+    </Compile>
     <Compile Include="sqlbaglantisi.cs" />
+    <Compile Include="yazılımyapımıDataSet.cs">
+      <DependentUpon>yazılımyapımıDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="yazılımyapımıDataSet.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>yazılımyapımıDataSet.xsd</DependentUpon>
     </Compile>
+    <Compile Include="yazılımyapımıDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>yazılımyapımıDataSet1.xsd</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="anaekran.resx">
+      <DependentUpon>anaekran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAdminEkrani.resx">
+      <DependentUpon>frmAdminEkrani.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmGirisEkrani.resx">
       <DependentUpon>frmGirisEkrani.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOgrenciAnaEkran.resx">
+      <DependentUpon>frmOgrenciAnaEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSinavSorumlu.resx">
+      <DependentUpon>frmSinavSorumlu.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmUyeol.resx">
       <DependentUpon>frmUyeol.cs</DependentUpon>
@@ -91,6 +148,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="siinav.resx">
+      <DependentUpon>siinav.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -110,6 +170,17 @@
     </None>
     <None Include="yazılımyapımıDataSet.xss">
       <DependentUpon>yazılımyapımıDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="yazılımyapımıDataSet1.xsc">
+      <DependentUpon>yazılımyapımıDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="yazılımyapımıDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>yazılımyapımıDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="yazılımyapımıDataSet1.xss">
+      <DependentUpon>yazılımyapımıDataSet1.xsd</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
