@@ -43,6 +43,10 @@ namespace Yazılımyapımı
             this.soruCmbbox = new System.Windows.Forms.ComboBox();
             this.uyeolBttn = new System.Windows.Forms.Button();
             this.cikisBttn = new System.Windows.Forms.Button();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.yazılımyapımıDataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.yazılımyapımıDataSet2)).BeginInit();
             this.SuspendLayout();
@@ -67,9 +71,9 @@ namespace Yazılımyapımı
             // 
             this.emailLbl.AutoSize = true;
             this.emailLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.emailLbl.Location = new System.Drawing.Point(93, 69);
+            this.emailLbl.Location = new System.Drawing.Point(107, 158);
             this.emailLbl.Name = "emailLbl";
-            this.emailLbl.Size = new System.Drawing.Size(71, 25);
+            this.emailLbl.Size = new System.Drawing.Size(89, 31);
             this.emailLbl.TabIndex = 0;
             this.emailLbl.Text = "Email:";
             // 
@@ -77,9 +81,9 @@ namespace Yazılımyapımı
             // 
             this.sifreLbl.AutoSize = true;
             this.sifreLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.sifreLbl.Location = new System.Drawing.Point(102, 101);
+            this.sifreLbl.Location = new System.Drawing.Point(118, 197);
             this.sifreLbl.Name = "sifreLbl";
-            this.sifreLbl.Size = new System.Drawing.Size(62, 25);
+            this.sifreLbl.Size = new System.Drawing.Size(78, 31);
             this.sifreLbl.TabIndex = 1;
             this.sifreLbl.Text = "Şifre:";
             // 
@@ -87,9 +91,9 @@ namespace Yazılımyapımı
             // 
             this.soruLbl.AutoSize = true;
             this.soruLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.soruLbl.Location = new System.Drawing.Point(101, 133);
+            this.soruLbl.Location = new System.Drawing.Point(117, 237);
             this.soruLbl.Name = "soruLbl";
-            this.soruLbl.Size = new System.Drawing.Size(63, 25);
+            this.soruLbl.Size = new System.Drawing.Size(79, 31);
             this.soruLbl.TabIndex = 2;
             this.soruLbl.Text = "Soru:";
             // 
@@ -97,31 +101,34 @@ namespace Yazılımyapımı
             // 
             this.cevapLbl.AutoSize = true;
             this.cevapLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.cevapLbl.Location = new System.Drawing.Point(84, 165);
+            this.cevapLbl.Location = new System.Drawing.Point(97, 276);
             this.cevapLbl.Name = "cevapLbl";
-            this.cevapLbl.Size = new System.Drawing.Size(80, 25);
+            this.cevapLbl.Size = new System.Drawing.Size(101, 31);
             this.cevapLbl.TabIndex = 3;
             this.cevapLbl.Text = "Cevap:";
             // 
             // emailTxtbox
             // 
-            this.emailTxtbox.Location = new System.Drawing.Point(184, 69);
+            this.emailTxtbox.Location = new System.Drawing.Point(214, 158);
+            this.emailTxtbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.emailTxtbox.Name = "emailTxtbox";
-            this.emailTxtbox.Size = new System.Drawing.Size(257, 20);
+            this.emailTxtbox.Size = new System.Drawing.Size(299, 24);
             this.emailTxtbox.TabIndex = 4;
             // 
             // sifreTxtbox
             // 
-            this.sifreTxtbox.Location = new System.Drawing.Point(184, 101);
+            this.sifreTxtbox.Location = new System.Drawing.Point(214, 197);
+            this.sifreTxtbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.sifreTxtbox.Name = "sifreTxtbox";
-            this.sifreTxtbox.Size = new System.Drawing.Size(257, 20);
+            this.sifreTxtbox.Size = new System.Drawing.Size(299, 24);
             this.sifreTxtbox.TabIndex = 5;
             // 
             // cevapTxtbox
             // 
-            this.cevapTxtbox.Location = new System.Drawing.Point(184, 170);
+            this.cevapTxtbox.Location = new System.Drawing.Point(214, 282);
+            this.cevapTxtbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cevapTxtbox.Name = "cevapTxtbox";
-            this.cevapTxtbox.Size = new System.Drawing.Size(257, 20);
+            this.cevapTxtbox.Size = new System.Drawing.Size(299, 24);
             this.cevapTxtbox.TabIndex = 6;
             // 
             // soruCmbbox
@@ -131,16 +138,18 @@ namespace Yazılımyapımı
             "1)İlkokul öğretmeninizin adı?",
             "2)Öğrenci nonuz?",
             "3)En sevdiğiniz öğretmeninizin adı?"});
-            this.soruCmbbox.Location = new System.Drawing.Point(184, 137);
+            this.soruCmbbox.Location = new System.Drawing.Point(214, 242);
+            this.soruCmbbox.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.soruCmbbox.Name = "soruCmbbox";
-            this.soruCmbbox.Size = new System.Drawing.Size(257, 21);
+            this.soruCmbbox.Size = new System.Drawing.Size(299, 24);
             this.soruCmbbox.TabIndex = 7;
             // 
             // uyeolBttn
             // 
-            this.uyeolBttn.Location = new System.Drawing.Point(184, 215);
+            this.uyeolBttn.Location = new System.Drawing.Point(214, 321);
+            this.uyeolBttn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.uyeolBttn.Name = "uyeolBttn";
-            this.uyeolBttn.Size = new System.Drawing.Size(257, 41);
+            this.uyeolBttn.Size = new System.Drawing.Size(300, 50);
             this.uyeolBttn.TabIndex = 8;
             this.uyeolBttn.Text = "ÜYE OL";
             this.uyeolBttn.UseVisualStyleBackColor = true;
@@ -148,20 +157,61 @@ namespace Yazılımyapımı
             // 
             // cikisBttn
             // 
-            this.cikisBttn.Location = new System.Drawing.Point(184, 275);
+            this.cikisBttn.Location = new System.Drawing.Point(215, 418);
+            this.cikisBttn.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.cikisBttn.Name = "cikisBttn";
-            this.cikisBttn.Size = new System.Drawing.Size(257, 41);
+            this.cikisBttn.Size = new System.Drawing.Size(300, 50);
             this.cikisBttn.TabIndex = 9;
             this.cikisBttn.Text = "ÇIKIŞ";
             this.cikisBttn.UseVisualStyleBackColor = true;
             this.cikisBttn.Click += new System.EventHandler(this.cikisBttn_Click);
             // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(215, 36);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(299, 24);
+            this.textBox1.TabIndex = 11;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.Location = new System.Drawing.Point(108, 36);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(53, 31);
+            this.label1.TabIndex = 10;
+            this.label1.Text = "Adi";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(214, 92);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(299, 24);
+            this.textBox2.TabIndex = 13;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.Location = new System.Drawing.Point(107, 92);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(53, 31);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "Adi";
+            // 
             // frmUyeol
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(933, 554);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.cikisBttn);
             this.Controls.Add(this.uyeolBttn);
             this.Controls.Add(this.soruCmbbox);
@@ -172,8 +222,10 @@ namespace Yazılımyapımı
             this.Controls.Add(this.soruLbl);
             this.Controls.Add(this.sifreLbl);
             this.Controls.Add(this.emailLbl);
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmUyeol";
             this.Text = "Üye Ol";
+            this.Load += new System.EventHandler(this.frmUyeol_Load);
             ((System.ComponentModel.ISupportInitialize)(this.yazılımyapımıDataSet1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.yazılımyapımıDataSet2)).EndInit();
             this.ResumeLayout(false);
@@ -197,5 +249,9 @@ namespace Yazılımyapımı
         private System.Windows.Forms.ComboBox soruCmbbox;
         private System.Windows.Forms.Button uyeolBttn;
         private System.Windows.Forms.Button cikisBttn;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.Label label2;
     }
 }

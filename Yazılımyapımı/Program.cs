@@ -16,7 +16,7 @@ namespace Yazılımyapımı
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new girisekrani());
+            Application.Run(new frmAnaekran());
         }
     }
 }

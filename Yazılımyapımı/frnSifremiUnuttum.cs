@@ -21,8 +21,9 @@ namespace Yazılımyapımı
         SqlConnection baglanti = new SqlConnection("Data Source=.;Initial Catalog=yazılımyapımı;Integrated Security=True;");
         private void cikisBttn_Click(object sender, EventArgs e)
         {
-            girisekrani formgirisekrani = new girisekrani();
-            formgirisekrani.Show();
+            this.Hide();
+            frmAnaekran formana = new frmAnaekran();
+           formana.Show();
         }
 
         private void uyeolBttn_Click(object sender, EventArgs e)
@@ -30,7 +31,7 @@ namespace Yazılımyapımı
             try
             {
                 baglanti.Open();
-                string sql = "Select *From kullanici where email=@email AND cevap=@cevap";
+                string sql = "Select *From  ogrenci where mail=@email AND cevap=@cevap";
                 SqlParameter prm1 = new SqlParameter("email", emailTxtbox.Text.Trim());
                 SqlParameter prm2 = new SqlParameter("cevap", cevapTxtbox.Text.Trim());
                 SqlCommand komut = new SqlCommand(sql, baglanti);
@@ -41,7 +42,7 @@ namespace Yazılımyapımı
                 da.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
-                    SqlCommand command = new SqlCommand("select *from kullanici where email=@email like '" + emailTxtbox.Text + "'insert into kullanici (şifre) value('"+sifreTxtbox+"')", baglanti);
+                    SqlCommand command = new SqlCommand("select *from ogrenci where mail=@email like '" + emailTxtbox.Text + "'insert into ogrenci sifre value('" + sifreTxtbox+"')", baglanti);
                   
                     baglanti.Close();
                     
@@ -62,6 +63,11 @@ namespace Yazılımyapımı
                 MessageBox.Show("kullanıcı2 adı veya şifreyi yanlış girdiniz");
 
             }
+        }
+
+        private void sifremiunuttumFrm_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
