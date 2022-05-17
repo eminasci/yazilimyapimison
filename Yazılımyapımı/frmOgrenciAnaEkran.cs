@@ -35,5 +35,10 @@ namespace Yazılımyapımı
             label1.Text = ogrenc.adi;
 
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

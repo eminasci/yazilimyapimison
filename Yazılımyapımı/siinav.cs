@@ -45,6 +45,7 @@ namespace Yazılımyapımı
         string secencevap;
      // public ogrenci ogr1 = new ogrenci();
       public  frmOgrenciAnaEkran ogranar = new frmOgrenciAnaEkran();
+        public frmOgrenciSonucEkrani fosonucekr = new frmOgrenciSonucEkrani();
         //InitializeComponent();
         //lbl_tarih.Text= DateTime.Now.ToString("dd MMMM dddd | yyyy");
 
@@ -65,6 +66,7 @@ namespace Yazılımyapımı
         {
             MessageBox.Show("x="+x.ToString());
             sinav_ogr_id = yogr.id;
+            fosonucekr.ogr_sin_sonuc = yogr;
            // MessageBox.Show(z.ToString());
             //MessageBox.Show(  yogr.id.ToString());
             label1.Text = yogr.id.ToString();

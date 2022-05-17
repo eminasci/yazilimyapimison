@@ -71,6 +71,12 @@
     <Compile Include="frmOgrenciAnaEkran.Designer.cs">
       <DependentUpon>frmOgrenciAnaEkran.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmOgrenciSonucEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOgrenciSonucEkrani.Designer.cs">
+      <DependentUpon>frmOgrenciSonucEkrani.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmSinavSorumlu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -129,6 +135,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmOgrenciAnaEkran.resx">
       <DependentUpon>frmOgrenciAnaEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOgrenciSonucEkrani.resx">
+      <DependentUpon>frmOgrenciSonucEkrani.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSinavSorumlu.resx">
       <DependentUpon>frmSinavSorumlu.cs</DependentUpon>
