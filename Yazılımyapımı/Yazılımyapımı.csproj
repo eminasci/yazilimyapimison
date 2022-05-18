@@ -53,6 +53,12 @@
     <Compile Include="anaekran.Designer.cs">
       <DependentUpon>anaekran.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAdminAnaEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAdminAnaEkrani.Designer.cs">
+      <DependentUpon>frmAdminAnaEkrani.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmAdminEkrani.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -70,6 +76,12 @@
     </Compile>
     <Compile Include="frmOgrenciAnaEkran.Designer.cs">
       <DependentUpon>frmOgrenciAnaEkran.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmOgrenciSonucEkrani.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOgrenciSonucEkrani.Designer.cs">
+      <DependentUpon>frmOgrenciSonucEkrani.cs</DependentUpon>
     </Compile>
     <Compile Include="frmSinavSorumlu.cs">
       <SubType>Form</SubType>
@@ -121,6 +133,9 @@
     <EmbeddedResource Include="anaekran.resx">
       <DependentUpon>anaekran.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAdminAnaEkrani.resx">
+      <DependentUpon>frmAdminAnaEkrani.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmAdminEkrani.resx">
       <DependentUpon>frmAdminEkrani.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +144,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="frmOgrenciAnaEkran.resx">
       <DependentUpon>frmOgrenciAnaEkran.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOgrenciSonucEkrani.resx">
+      <DependentUpon>frmOgrenciSonucEkrani.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSinavSorumlu.resx">
       <DependentUpon>frmSinavSorumlu.cs</DependentUpon>
@@ -150,6 +168,9 @@
     </Compile>
     <EmbeddedResource Include="siinav.resx">
       <DependentUpon>siinav.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="sonuc.resx">
+      <DependentUpon>sonuc.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

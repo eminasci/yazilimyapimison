@@ -15,7 +15,7 @@ namespace Yazılımyapımı
 {
     public partial class siinav : Form
     {
-        int dakika = 1, saniye =60 ;
+        int dakika = 0, saniye =10 ;
         public siinav()
         {
             InitializeComponent();
@@ -32,9 +32,9 @@ namespace Yazılımyapımı
         public int soru_numara { get; set; }
         public int toplam_puan { get; set; }
         public int sinav_ogr_id { get; set; }
+        public string sinav_ogr_adi { get; set; }
         string imgeLocation1 ="";
         SqlConnection conn = new SqlConnection("Data Source =.; Initial Catalog = yazılımyapımı; Integrated Security = True;");
-
         SqlCommand comm;
         SqlCommand com2;
         SqlCommand com3;
@@ -44,17 +44,13 @@ namespace Yazılımyapımı
         SqlDataReader reder;
         SqlDataAdapter da;
         string secencevap;
-     // public ogrenci ogr1 = new ogrenci();
       public  frmOgrenciAnaEkran ogranar = new frmOgrenciAnaEkran();
-        //InitializeComponent();
-        //lbl_tarih.Text= DateTime.Now.ToString("dd MMMM dddd | yyyy");
-
+       
         public void sorular()
         {
             for (int i = 0; i < 10; i++)
             {
                 com = new SqlCommand("SELECT TOP 1 soru_tbl.Id FROM soru_tbl ORDER BY NEWID()", conn);
-                //comm= new SqlCommand("SELECT COUNT(ID) from soru_tbl WHERE ID=58");
                 conn.Open();
                 soru[i] = (int)com.ExecuteScalar();
                 soru_numara++;
@@ -69,17 +65,14 @@ namespace Yazılımyapımı
            
             label3.Text = "0";
             timer1.Start(); timer2.Start();
-           
 
-
-
-
-            MessageBox.Show("x="+x.ToString());
             sinav_ogr_id = yogr.id;
-           // MessageBox.Show(z.ToString());
-            //MessageBox.Show(  yogr.id.ToString());
-            label1.Text = yogr.id.ToString();
+            sinav_ogr_adi = yogr.adi;
+            MessageBox.Show("Sevgili öğrencimiz: "+sinav_ogr_adi+"     başarılar dileriz" );
+            label1.Text = yogr.adi;
+
             sorular();
+
             conn.Open();
             com1 = new SqlCommand("SELECT  soru_photo  from soru_tbl where ID=@id", conn);
             com1.Parameters.AddWithValue("@id", soru[x]);
@@ -95,9 +88,6 @@ namespace Yazılımyapımı
             com2.Parameters.AddWithValue("@id", soru[x]);
             secencevap = (string)com2.ExecuteScalar();
             conn.Close();
-            //x++;
-            //z++;
-            MessageBox.Show("x=" + x.ToString());
         }
         public void imggetir()
         {
@@ -107,11 +97,12 @@ namespace Yazılımyapımı
             DataTable table = new DataTable();
             da = new SqlDataAdapter(com1);
             da.Fill(table);
-            
             Byte[] img = (Byte[])table.Rows[0][0];
             MemoryStream ms = new MemoryStream(img);
             pictureBox1.Image = Image.FromStream(ms);
             conn.Close();
+
+
             conn.Open();
             com2 = new SqlCommand("SELECT soru_cevap  from soru_tbl where ID=@id", conn);
             com2.Parameters.AddWithValue("@id", soru[x]);
@@ -119,15 +110,12 @@ namespace Yazılımyapımı
             conn.Close();
             x++;
             RadioButunSifirla();
-
-
         }
 
         private void nextbutton_Click(object sender, EventArgs e)
         {
             if (x < 10)
             {
-               // MessageBox.Show(secencevap);
                 if (cevapA.Checked)
                 {
                     if (cevapA.Text == secencevap)
@@ -199,46 +187,37 @@ namespace Yazılımyapımı
                 secencevap = (string)com2.ExecuteScalar();
                 conn.Close();
                 x++;
-               // MessageBox.Show("x=" + x.ToString());
                 RadioButunSifirla();
-
-
-
             }
-            //comm = new SqlCommand("INSERT INTO sonuc(ogrenci_id,doğru_soru_sayisi,yanlis_soru_sayisi,bos_soru_sayisi,toplam_puan) VALUES (@oid,@dogru,@yanlis,@bos,@puan)  ");
+            
             else
             {
-                sinavbitir();
-                
-                
+                sinavbitir();   
             }
         }
-
 
         public void sinavbitir()
         {
             result();
-            sonuc son = new sonuc();
-            son.Show();
+            frmOgrenciAnaEkran foae1 = new frmOgrenciAnaEkran();
+            foae1.ogrenc.adi = sinav_ogr_adi;
+            foae1.ogrenc.id = sinav_ogr_id;
+            foae1.Show();
             this.Hide();
 
         }
-        
-
 
         public  void result()
         {
             conn.Open();
-            string rez = "INSERT INTO sonuc(ogrenci_id,dogru_soru_sayisi,yanlis_soru_sayisi,bos_soru_sayisi,toplam_puan) VALUES (@oid,@dogru,@yanlis,@bos,@puan)";
-
+            string rez = "INSERT INTO sonuc(ogrenci_id,dogru_soru_sayisi,yanlis_soru_sayisi,bos_soru_sayisi,toplam_puan,ogrenci_adi) VALUES (@oid,@dogru,@yanlis,@bos,@puan,@ogrenciadi)";
             comm = new SqlCommand(rez, conn);
             comm.Parameters.AddWithValue("@oid", sinav_ogr_id);
             comm.Parameters.AddWithValue("@dogru", dogru_soru_sayisi);
             comm.Parameters.AddWithValue("@yanlis", yanlis_soru_sayisi);
             comm.Parameters.AddWithValue("@bos", bos_soru_sayisi);
             comm.Parameters.AddWithValue("@puan", toplam_puan);
-
-
+            comm.Parameters.AddWithValue("@ogrenciadi", sinav_ogr_adi);
             comm.ExecuteNonQuery();
             conn.Close();
 
@@ -266,6 +245,11 @@ namespace Yazılımyapımı
             label3.Text = saniye.ToString();
             label2.Text = dakika.ToString();
             saniye--;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
         }
 
         public void  RadioButunSifirla()

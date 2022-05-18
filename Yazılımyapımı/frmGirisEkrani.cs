@@ -17,7 +17,7 @@ namespace Yazılımyapımı
         {
             InitializeComponent();
         }
-        //frmOgrenciAnaEkran xx = new frmOgrenciAnaEkran();
+       
         public frmOgrenciAnaEkran oae = new frmOgrenciAnaEkran();
         public ogrenci xogr = new ogrenci();
         public siinav sin = new siinav();
@@ -37,7 +37,7 @@ namespace Yazılımyapımı
                 komut.Parameters.Add(prm2);
                 DataTable dt = new DataTable();
                 SqlDataAdapter da = new SqlDataAdapter(komut);
-                //DataTable dta = new DataTable();
+                
                 da.Fill(dt);
                 if (dt.Rows.Count>0)
                 {
@@ -45,7 +45,15 @@ namespace Yazılımyapımı
                     SqlCommand cmd = new SqlCommand(sql11, baglanti);
                     cmd.Parameters.AddWithValue("@email", email_Txtbox.Text.Trim());
                     xogr.id = (int)cmd.ExecuteScalar();
-                    MessageBox.Show(xogr.id.ToString());
+
+
+                    string sql12 = "Select adi From ogrenci where mail=@emaiil";
+                    SqlCommand cmd12 = new SqlCommand(sql12, baglanti);
+                    cmd12.Parameters.AddWithValue("@emaiil", email_Txtbox.Text.Trim());
+                    xogr.adi = (string)cmd12.ExecuteScalar();
+
+
+                    oae.ogrenc.adi = xogr.adi;
                     oae.ogrenc.id = xogr.id;
                     sin.yogr = xogr;
                     oae.Show();

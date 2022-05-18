@@ -50,23 +50,19 @@ namespace Yazılımyapımı
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.textBox1 = new System.Windows.Forms.TextBox();
-            this.radioButton1 = new System.Windows.Forms.RadioButton();
-            this.radioButton2 = new System.Windows.Forms.RadioButton();
-            this.radioButton3 = new System.Windows.Forms.RadioButton();
-            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.cevap_guncelleD = new System.Windows.Forms.RadioButton();
+            this.cevap_guncelleC = new System.Windows.Forms.RadioButton();
+            this.cevap_guncelleB = new System.Windows.Forms.RadioButton();
+            this.cevap_guncelleA = new System.Windows.Forms.RadioButton();
             this.label7 = new System.Windows.Forms.Label();
             this.button3 = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ıdDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.konuadiDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.soruphotoDataGridViewImageColumn = new System.Windows.Forms.DataGridViewImageColumn();
-            this.sorucevapDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sorupuanDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sorutblBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.yazılımyapımıDataSet1 = new Yazılımyapımı.yazılımyapımıDataSet1();
             this.soru_tblTableAdapter = new Yazılımyapımı.yazılımyapımıDataSet1TableAdapters.soru_tblTableAdapter();
+            this.button4 = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -246,14 +242,15 @@ namespace Yazılımyapımı
             // 
             // tabPage2
             // 
+            this.tabPage2.Controls.Add(this.button4);
             this.tabPage2.Controls.Add(this.label4);
             this.tabPage2.Controls.Add(this.comboBox2);
             this.tabPage2.Controls.Add(this.label5);
             this.tabPage2.Controls.Add(this.textBox1);
-            this.tabPage2.Controls.Add(this.radioButton1);
-            this.tabPage2.Controls.Add(this.radioButton2);
-            this.tabPage2.Controls.Add(this.radioButton3);
-            this.tabPage2.Controls.Add(this.radioButton4);
+            this.tabPage2.Controls.Add(this.cevap_guncelleD);
+            this.tabPage2.Controls.Add(this.cevap_guncelleC);
+            this.tabPage2.Controls.Add(this.cevap_guncelleB);
+            this.tabPage2.Controls.Add(this.cevap_guncelleA);
             this.tabPage2.Controls.Add(this.label7);
             this.tabPage2.Controls.Add(this.button3);
             this.tabPage2.Controls.Add(this.label8);
@@ -308,49 +305,49 @@ namespace Yazılımyapımı
             this.textBox1.Size = new System.Drawing.Size(100, 24);
             this.textBox1.TabIndex = 29;
             // 
-            // radioButton1
+            // cevap_guncelleD
             // 
-            this.radioButton1.AutoSize = true;
-            this.radioButton1.Location = new System.Drawing.Point(865, 687);
-            this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(39, 21);
-            this.radioButton1.TabIndex = 28;
-            this.radioButton1.TabStop = true;
-            this.radioButton1.Text = "D";
-            this.radioButton1.UseVisualStyleBackColor = true;
+            this.cevap_guncelleD.AutoSize = true;
+            this.cevap_guncelleD.Location = new System.Drawing.Point(865, 687);
+            this.cevap_guncelleD.Name = "cevap_guncelleD";
+            this.cevap_guncelleD.Size = new System.Drawing.Size(39, 21);
+            this.cevap_guncelleD.TabIndex = 28;
+            this.cevap_guncelleD.TabStop = true;
+            this.cevap_guncelleD.Text = "D";
+            this.cevap_guncelleD.UseVisualStyleBackColor = true;
             // 
-            // radioButton2
+            // cevap_guncelleC
             // 
-            this.radioButton2.AutoSize = true;
-            this.radioButton2.Location = new System.Drawing.Point(787, 687);
-            this.radioButton2.Name = "radioButton2";
-            this.radioButton2.Size = new System.Drawing.Size(38, 21);
-            this.radioButton2.TabIndex = 27;
-            this.radioButton2.TabStop = true;
-            this.radioButton2.Text = "C";
-            this.radioButton2.UseVisualStyleBackColor = true;
+            this.cevap_guncelleC.AutoSize = true;
+            this.cevap_guncelleC.Location = new System.Drawing.Point(787, 687);
+            this.cevap_guncelleC.Name = "cevap_guncelleC";
+            this.cevap_guncelleC.Size = new System.Drawing.Size(38, 21);
+            this.cevap_guncelleC.TabIndex = 27;
+            this.cevap_guncelleC.TabStop = true;
+            this.cevap_guncelleC.Text = "C";
+            this.cevap_guncelleC.UseVisualStyleBackColor = true;
             // 
-            // radioButton3
+            // cevap_guncelleB
             // 
-            this.radioButton3.AutoSize = true;
-            this.radioButton3.Location = new System.Drawing.Point(867, 628);
-            this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(37, 21);
-            this.radioButton3.TabIndex = 26;
-            this.radioButton3.TabStop = true;
-            this.radioButton3.Text = "B";
-            this.radioButton3.UseVisualStyleBackColor = true;
+            this.cevap_guncelleB.AutoSize = true;
+            this.cevap_guncelleB.Location = new System.Drawing.Point(867, 628);
+            this.cevap_guncelleB.Name = "cevap_guncelleB";
+            this.cevap_guncelleB.Size = new System.Drawing.Size(37, 21);
+            this.cevap_guncelleB.TabIndex = 26;
+            this.cevap_guncelleB.TabStop = true;
+            this.cevap_guncelleB.Text = "B";
+            this.cevap_guncelleB.UseVisualStyleBackColor = true;
             // 
-            // radioButton4
+            // cevap_guncelleA
             // 
-            this.radioButton4.AutoSize = true;
-            this.radioButton4.Location = new System.Drawing.Point(787, 628);
-            this.radioButton4.Name = "radioButton4";
-            this.radioButton4.Size = new System.Drawing.Size(37, 21);
-            this.radioButton4.TabIndex = 25;
-            this.radioButton4.TabStop = true;
-            this.radioButton4.Text = "A";
-            this.radioButton4.UseVisualStyleBackColor = true;
+            this.cevap_guncelleA.AutoSize = true;
+            this.cevap_guncelleA.Location = new System.Drawing.Point(787, 628);
+            this.cevap_guncelleA.Name = "cevap_guncelleA";
+            this.cevap_guncelleA.Size = new System.Drawing.Size(37, 21);
+            this.cevap_guncelleA.TabIndex = 25;
+            this.cevap_guncelleA.TabStop = true;
+            this.cevap_guncelleA.Text = "A";
+            this.cevap_guncelleA.UseVisualStyleBackColor = true;
             // 
             // label7
             // 
@@ -369,6 +366,7 @@ namespace Yazılımyapımı
             this.button3.TabIndex = 23;
             this.button3.Text = "GÖZAT";
             this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label8
             // 
@@ -390,16 +388,10 @@ namespace Yazılımyapımı
             // 
             // dataGridView1
             // 
-            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
             this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.ıdDataGridViewTextBoxColumn,
-            this.konuadiDataGridViewTextBoxColumn,
-            this.soruphotoDataGridViewImageColumn,
-            this.sorucevapDataGridViewTextBoxColumn,
-            this.sorupuanDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.sorutblBindingSource;
             this.dataGridView1.Location = new System.Drawing.Point(0, 506);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
@@ -408,51 +400,6 @@ namespace Yazılımyapımı
             this.dataGridView1.Size = new System.Drawing.Size(737, 231);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // ıdDataGridViewTextBoxColumn
-            // 
-            this.ıdDataGridViewTextBoxColumn.DataPropertyName = "Id";
-            this.ıdDataGridViewTextBoxColumn.HeaderText = "Id";
-            this.ıdDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.ıdDataGridViewTextBoxColumn.Name = "ıdDataGridViewTextBoxColumn";
-            this.ıdDataGridViewTextBoxColumn.ReadOnly = true;
-            this.ıdDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // konuadiDataGridViewTextBoxColumn
-            // 
-            this.konuadiDataGridViewTextBoxColumn.DataPropertyName = "konu_adi";
-            this.konuadiDataGridViewTextBoxColumn.HeaderText = "konu_adi";
-            this.konuadiDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.konuadiDataGridViewTextBoxColumn.Name = "konuadiDataGridViewTextBoxColumn";
-            this.konuadiDataGridViewTextBoxColumn.ReadOnly = true;
-            this.konuadiDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // soruphotoDataGridViewImageColumn
-            // 
-            this.soruphotoDataGridViewImageColumn.DataPropertyName = "soru_photo";
-            this.soruphotoDataGridViewImageColumn.HeaderText = "soru_photo";
-            this.soruphotoDataGridViewImageColumn.MinimumWidth = 6;
-            this.soruphotoDataGridViewImageColumn.Name = "soruphotoDataGridViewImageColumn";
-            this.soruphotoDataGridViewImageColumn.ReadOnly = true;
-            this.soruphotoDataGridViewImageColumn.Width = 125;
-            // 
-            // sorucevapDataGridViewTextBoxColumn
-            // 
-            this.sorucevapDataGridViewTextBoxColumn.DataPropertyName = "soru_cevap";
-            this.sorucevapDataGridViewTextBoxColumn.HeaderText = "soru_cevap";
-            this.sorucevapDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sorucevapDataGridViewTextBoxColumn.Name = "sorucevapDataGridViewTextBoxColumn";
-            this.sorucevapDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sorucevapDataGridViewTextBoxColumn.Width = 125;
-            // 
-            // sorupuanDataGridViewTextBoxColumn
-            // 
-            this.sorupuanDataGridViewTextBoxColumn.DataPropertyName = "soru_puan";
-            this.sorupuanDataGridViewTextBoxColumn.HeaderText = "soru_puan";
-            this.sorupuanDataGridViewTextBoxColumn.MinimumWidth = 6;
-            this.sorupuanDataGridViewTextBoxColumn.Name = "sorupuanDataGridViewTextBoxColumn";
-            this.sorupuanDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sorupuanDataGridViewTextBoxColumn.Width = 125;
             // 
             // sorutblBindingSource
             // 
@@ -467,6 +414,16 @@ namespace Yazılımyapımı
             // soru_tblTableAdapter
             // 
             this.soru_tblTableAdapter.ClearBeforeFill = true;
+            // 
+            // button4
+            // 
+            this.button4.Location = new System.Drawing.Point(1232, 687);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(165, 23);
+            this.button4.TabIndex = 34;
+            this.button4.Text = "GÜNCELLE";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // frmSinavSorumlu
             // 
@@ -514,21 +471,17 @@ namespace Yazılımyapımı
         private System.Windows.Forms.BindingSource sorutblBindingSource;
         private yazılımyapımıDataSet1TableAdapters.soru_tblTableAdapter soru_tblTableAdapter;
         private System.Windows.Forms.PictureBox pictureBox2;
-        private System.Windows.Forms.DataGridViewTextBoxColumn ıdDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn konuadiDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewImageColumn soruphotoDataGridViewImageColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sorucevapDataGridViewTextBoxColumn;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sorupuanDataGridViewTextBoxColumn;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.RadioButton radioButton1;
-        private System.Windows.Forms.RadioButton radioButton2;
-        private System.Windows.Forms.RadioButton radioButton3;
-        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton cevap_guncelleD;
+        private System.Windows.Forms.RadioButton cevap_guncelleC;
+        private System.Windows.Forms.RadioButton cevap_guncelleB;
+        private System.Windows.Forms.RadioButton cevap_guncelleA;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button button4;
     }
 }

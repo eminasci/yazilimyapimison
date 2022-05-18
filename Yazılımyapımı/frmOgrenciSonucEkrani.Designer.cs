@@ -1,7 +1,7 @@
 ﻿
 namespace Yazılımyapımı
 {
-    partial class sonuc
+    partial class frmOgrenciSonucEkrani
     {
         /// <summary>
         /// Required designer variable.
@@ -37,25 +37,24 @@ namespace Yazılımyapımı
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ControlLightLight;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(12, 12);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 26;
-            this.dataGridView1.Size = new System.Drawing.Size(900, 586);
+            this.dataGridView1.Size = new System.Drawing.Size(964, 426);
             this.dataGridView1.TabIndex = 0;
             // 
-            // sonuc
+            // frmOgrenciSonucEkrani
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1035, 717);
+            this.ClientSize = new System.Drawing.Size(1022, 529);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "sonuc";
-            this.Text = "sonuc";
-            this.Load += new System.EventHandler(this.sonuc_Load);
+            this.Name = "frmOgrenciSonucEkrani";
+            this.Text = "frmOgrenciSonucEkrani";
+            this.Load += new System.EventHandler(this.frmOgrenciSonucEkrani_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 

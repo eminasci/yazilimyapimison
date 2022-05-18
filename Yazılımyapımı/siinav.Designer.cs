@@ -47,10 +47,10 @@ namespace Yazılımyapımı
             // 
             // nextbutton
             // 
-            this.nextbutton.Location = new System.Drawing.Point(511, 318);
+            this.nextbutton.Location = new System.Drawing.Point(303, 596);
             this.nextbutton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.nextbutton.Name = "nextbutton";
-            this.nextbutton.Size = new System.Drawing.Size(114, 31);
+            this.nextbutton.Size = new System.Drawing.Size(133, 38);
             this.nextbutton.TabIndex = 0;
             this.nextbutton.Text = "NEXT SORU";
             this.nextbutton.UseVisualStyleBackColor = true;
@@ -61,17 +61,19 @@ namespace Yazılımyapımı
             this.pictureBox1.Location = new System.Drawing.Point(1, 1);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(547, 258);
+            this.pictureBox1.Size = new System.Drawing.Size(1403, 550);
             this.pictureBox1.TabIndex = 1;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // cevapA
             // 
             this.cevapA.AutoSize = true;
-            this.cevapA.Location = new System.Drawing.Point(55, 274);
+            this.cevapA.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.cevapA.Location = new System.Drawing.Point(64, 574);
             this.cevapA.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cevapA.Name = "cevapA";
-            this.cevapA.Size = new System.Drawing.Size(32, 17);
+            this.cevapA.Size = new System.Drawing.Size(43, 28);
             this.cevapA.TabIndex = 2;
             this.cevapA.TabStop = true;
             this.cevapA.Text = "A";
@@ -80,10 +82,11 @@ namespace Yazılımyapımı
             // cevapB
             // 
             this.cevapB.AutoSize = true;
-            this.cevapB.Location = new System.Drawing.Point(153, 274);
+            this.cevapB.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.cevapB.Location = new System.Drawing.Point(212, 574);
             this.cevapB.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cevapB.Name = "cevapB";
-            this.cevapB.Size = new System.Drawing.Size(32, 17);
+            this.cevapB.Size = new System.Drawing.Size(43, 28);
             this.cevapB.TabIndex = 3;
             this.cevapB.TabStop = true;
             this.cevapB.Text = "B";
@@ -92,10 +95,11 @@ namespace Yazılımyapımı
             // cevapC
             // 
             this.cevapC.AutoSize = true;
-            this.cevapC.Location = new System.Drawing.Point(54, 325);
+            this.cevapC.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.cevapC.Location = new System.Drawing.Point(64, 639);
             this.cevapC.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cevapC.Name = "cevapC";
-            this.cevapC.Size = new System.Drawing.Size(32, 17);
+            this.cevapC.Size = new System.Drawing.Size(43, 28);
             this.cevapC.TabIndex = 4;
             this.cevapC.TabStop = true;
             this.cevapC.Text = "C";
@@ -104,10 +108,11 @@ namespace Yazılımyapımı
             // cevapD
             // 
             this.cevapD.AutoSize = true;
-            this.cevapD.Location = new System.Drawing.Point(152, 325);
+            this.cevapD.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.cevapD.Location = new System.Drawing.Point(212, 644);
             this.cevapD.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.cevapD.Name = "cevapD";
-            this.cevapD.Size = new System.Drawing.Size(33, 17);
+            this.cevapD.Size = new System.Drawing.Size(45, 28);
             this.cevapD.TabIndex = 5;
             this.cevapD.TabStop = true;
             this.cevapD.Text = "D";
@@ -116,36 +121,40 @@ namespace Yazılımyapımı
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(624, 48);
+            this.label1.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.label1.Location = new System.Drawing.Point(1259, 571);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(64, 24);
             this.label1.TabIndex = 6;
             this.label1.Text = "label1";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(583, 9);
+            this.label2.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.label2.Location = new System.Drawing.Point(1221, 631);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.Size = new System.Drawing.Size(64, 24);
             this.label2.TabIndex = 7;
             this.label2.Text = "label2";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(639, 9);
+            this.label3.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.label3.Location = new System.Drawing.Point(1341, 631);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.Size = new System.Drawing.Size(64, 24);
             this.label3.TabIndex = 8;
             this.label3.Text = "label3";
             // 
             // lblortasaat
             // 
             this.lblortasaat.AutoSize = true;
-            this.lblortasaat.Location = new System.Drawing.Point(624, 9);
+            this.lblortasaat.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.lblortasaat.Location = new System.Drawing.Point(1303, 631);
             this.lblortasaat.Name = "lblortasaat";
-            this.lblortasaat.Size = new System.Drawing.Size(10, 13);
+            this.lblortasaat.Size = new System.Drawing.Size(17, 24);
             this.lblortasaat.TabIndex = 9;
             this.lblortasaat.Text = ":";
             // 
@@ -159,9 +168,9 @@ namespace Yazılımyapımı
             // 
             // siinav
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(686, 366);
+            this.ClientSize = new System.Drawing.Size(1416, 673);
             this.Controls.Add(this.lblortasaat);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);

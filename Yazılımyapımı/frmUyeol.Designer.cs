@@ -198,9 +198,9 @@ namespace Yazılımyapımı
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label2.Location = new System.Drawing.Point(107, 92);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(53, 31);
+            this.label2.Size = new System.Drawing.Size(93, 31);
             this.label2.TabIndex = 12;
-            this.label2.Text = "Adi";
+            this.label2.Text = "soyadi";
             // 
             // frmUyeol
             // 

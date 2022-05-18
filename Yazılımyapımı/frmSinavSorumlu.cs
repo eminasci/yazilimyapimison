@@ -23,7 +23,11 @@ namespace Yazılımyapımı
         SqlConnection baglan = new SqlConnection(constring);
         string imgeLocation = "";
         string cevap = "";
+        string cevap_guncelle = "";
+        string imgeLocation1 = "";
         OpenFileDialog dialog = new OpenFileDialog();
+        //private string imgloc="";
+        int soru_id_guncelle;
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -64,6 +68,7 @@ namespace Yazılımyapımı
                     MessageBox.Show("Kaydınız yapılmıştır.");
                     sil();
                     baglan.Close();
+                    sorular_getir();
                 }
             }
             catch (Exception hata)
@@ -73,18 +78,7 @@ namespace Yazılımyapımı
             }
         }
 
-        public void sil()
-        {
-            textBoxpuan.Clear();
-            imgeLocation = "";
-            comboBox1.SelectedIndex = -1;
-            radioButtonA.Checked = false;
-            radioButtonB.Checked = false;
-            radioButtonC.Checked = false;
-            radioButtonD.Checked = false;
-            pictureBox1.Invalidate();
-            pictureBox1.Image = null;
-        }
+       
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -115,20 +109,20 @@ namespace Yazılımyapımı
 
         private void frmSinavSorumlu_Load(object sender, EventArgs e)
         {
-            // TODO: This line of code loads data into the 'yazılımyapımıDataSet1.soru_tbl' table. You can move, or remove it, as needed.
-            this.soru_tblTableAdapter.Fill(this.yazılımyapımıDataSet1.soru_tbl);
+            sorular_getir();
 
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            
-                
-                
-            textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[4].Value.ToString();
-            byte [] imagData =(byte[]) dataGridView1.Rows[e.RowIndex].Cells[2].Value;
+
+
+
+            textBox1.Text = dataGridView1.Rows[e.RowIndex].Cells[3].Value.ToString();
+            byte[] imagData = (byte[])dataGridView1.Rows[e.RowIndex].Cells[1].Value;
             MemoryStream ms = new MemoryStream(imagData);
             pictureBox2.Image = Image.FromStream(ms);
+            soru_id_guncelle = (int)dataGridView1.Rows[e.RowIndex].Cells[0].Value;
 
 
 
@@ -139,6 +133,93 @@ namespace Yazılımyapımı
         private void tabPage2_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            dialog.Filter = "png files (*.png)|*.png|jpg files(*.jpg)|*.jpg|All file (*.*)|*.*";
+            if (dialog.ShowDialog() == DialogResult.OK)
+            {
+                imgeLocation1 = dialog.FileName.ToString();
+                pictureBox2.ImageLocation = imgeLocation1;
+
+            }
+            baglan.Close();
+
+        }
+
+        public void sorular_getir()
+        {
+            DataTable dt = new DataTable();
+            baglan.Open();
+            string string_Queryable = "select * from soru_tbl";
+            SqlCommand comma = new SqlCommand(string_Queryable, baglan);
+            SqlDataReader rdr = comma.ExecuteReader();
+            dt.Load(rdr);
+            baglan.Close();
+            dataGridView1.DataSource = dt;
+        }
+        public void sil()
+        {
+            textBoxpuan.Clear();
+            imgeLocation = "";
+            comboBox1.SelectedIndex = -1;
+            radioButtonA.Checked = false;
+            radioButtonB.Checked = false;
+            radioButtonC.Checked = false;
+            radioButtonD.Checked = false;
+            pictureBox1.Invalidate();
+            pictureBox1.Image = null;
+        }
+        public void Soru_guncella_sil()
+        {
+            textBox1.Clear();
+            imgeLocation = "";
+            comboBox2.SelectedIndex = -1;
+            cevap_guncelleA.Checked = false;
+            cevap_guncelleB.Checked = false;
+            cevap_guncelleC.Checked = false;
+            cevap_guncelleD.Checked = false;
+            pictureBox2.Invalidate();
+            pictureBox2.Image = null;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            if (cevap_guncelleA.Checked)
+            {
+                cevap_guncelle = "A";
+            }
+            else if (cevap_guncelleB.Checked)
+            {
+                cevap_guncelle = "B";
+            }
+            else if (cevap_guncelleC.Checked)
+            {
+                cevap_guncelle = "C";
+            }
+            else { cevap_guncelle = "D"; }
+
+            Byte[] imagess = null;
+            FileStream streams = new FileStream(imgeLocation1, FileMode.Open, FileAccess.Read);
+            BinaryReader brss = new BinaryReader(streams);
+            imagess = brss.ReadBytes((int)streams.Length);
+            baglan.Open();
+            string Rezz = "update  soru_tbl set soru_photo=@photo,soru_cevap=@cevap,soru_puan=@puan,konu_adi=@konu where Id=@id  ";
+
+            SqlCommand komut2 = new SqlCommand(Rezz, baglan);
+            komut2.Parameters.AddWithValue("@id", soru_id_guncelle);
+            komut2.Parameters.AddWithValue("@photo", @imagess);//@images
+            komut2.Parameters.AddWithValue("@cevap", cevap_guncelle);
+            komut2.Parameters.AddWithValue("@puan", textBox1.Text);
+            komut2.Parameters.AddWithValue("@konu", comboBox2.SelectedItem);
+
+
+            komut2.ExecuteNonQuery();
+            baglan.Close();
+            MessageBox.Show("Kaydınız yapılmıştır.");
+            sorular_getir();
+            Soru_guncella_sil();
         }
     }
 }

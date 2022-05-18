@@ -54,11 +54,12 @@ namespace Yazılımyapımı
             this.button2.TabIndex = 1;
             this.button2.Text = "PUANIM GÖSTER";
             this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(157, 56);
+            this.label1.Location = new System.Drawing.Point(141, 56);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 17);
             this.label1.TabIndex = 2;
@@ -76,7 +77,7 @@ namespace Yazılımyapımı
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(251, 56);
+            this.label3.Location = new System.Drawing.Point(230, 56);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(81, 17);
             this.label3.TabIndex = 4;

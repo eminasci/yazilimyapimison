@@ -34,8 +34,10 @@ namespace Yazılımyapımı
                 da.Fill(dt);
                 if (dt.Rows.Count > 0)
                 {
-                    frmSinavSorumlu srm = new frmSinavSorumlu();
-                   srm.Show();
+                    frmAdminAnaEkrani fane = new frmAdminAnaEkrani();
+
+                    fane.Show();
+                    this.Hide();
 
                 }
                 else
@@ -56,6 +58,7 @@ namespace Yazılımyapımı
 
         private void CıkısBttn_Click(object sender, EventArgs e)
         {
+
             frmAnaekran frmAnaekran = new frmAnaekran();
             frmAnaekran.Show();
             this.Hide();

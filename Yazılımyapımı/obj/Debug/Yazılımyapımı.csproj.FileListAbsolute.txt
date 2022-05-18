@@ -63,3 +63,6 @@ C:\Users\Emin\Source\Repos\yazilimyapimison\Yazılımyapımı\obj\Debug\Yazılı
 C:\Users\Emin\Source\Repos\yazilimyapimison\Yazılımyapımı\obj\Debug\Yazılımyapımı.csproj.CoreCompileInputs.cache
 C:\Users\Emin\Source\Repos\yazilimyapimison\Yazılımyapımı\obj\Debug\Yazılımyapımı.exe
 C:\Users\Emin\Source\Repos\yazilimyapimison\Yazılımyapımı\obj\Debug\Yazılımyapımı.pdb
+C:\Users\user1\Desktop\yp 6 33\yazilimyapimi-master\Yeni klasör\Yazılımyapımı\obj\Debug\Yazılımyapımı.frmOgrenciSonucEkrani.resources
+C:\Users\user1\Desktop\yp 6 33\yazilimyapimi-master\Yeni klasör\Yazılımyapımı\obj\Debug\Yazılımyapımı.frmAdminAnaEkrani.resources
+C:\Users\user1\Desktop\yp 6 33\yazilimyapimi-master\Yeni klasör\Yazılımyapımı\obj\Debug\Yazılımyapımı.sonuc.resources

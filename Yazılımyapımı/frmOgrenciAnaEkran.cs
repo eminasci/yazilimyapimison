@@ -17,8 +17,9 @@ namespace Yazılımyapımı
             InitializeComponent();
         }
        public ogrenci ogrenc = new ogrenci();
+       public frmOgrenciSonucEkrani ogrsonuc = new frmOgrenciSonucEkrani();
 
-         
+
 
 
         private void button1_Click(object sender, EventArgs e)
@@ -31,9 +32,17 @@ namespace Yazılımyapımı
 
         private void frmOgrenciAnaEkran_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Hoş geldiniz " + ogrenc.id.ToString());
+          
             label1.Text = ogrenc.adi;
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+            ogrsonuc.ogrson = ogrenc;
+            ogrsonuc.Show();
+           
         }
     }
 }

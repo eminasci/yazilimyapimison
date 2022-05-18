@@ -37,13 +37,7 @@ namespace Yazılımyapımı
                 if (baglan.State == ConnectionState.Closed)
                 {
                     baglan.Open();
-                    //string Rez = "insert into kullanici (email,şifre,soru,cevap)values(@email,@şifre,@soru,@cevap)";
-
-                    //SqlCommand komut = new SqlCommand(Rez, baglan);
-                    //komut.Parameters.AddWithValue("@email", emailTxtbox.Text);
-                    //komut.Parameters.AddWithValue("@şifre", sifreTxtbox.Text);
-                    //komut.Parameters.AddWithValue("@soru", soruCmbbox.Text);
-                    //komut.Parameters.AddWithValue("@cevap", cevapTxtbox.Text);
+                   
                     string Rez = "insert into ogrenci (adi,soyadi,mail,sifre,soru,cevap)values(@adi,@soyadi,@mail,@sifre,@soru,@cevap)";
 
                     SqlCommand komut = new SqlCommand(Rez, baglan);
