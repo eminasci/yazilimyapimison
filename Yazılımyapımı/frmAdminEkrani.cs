@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Data.SqlClient;
 
+/*Kullandığımız isim alanlarını Using anahtar sözcüğü ile tanımladık.*/
+
 namespace Yazılımyapımı
 {
     public partial class frmAdminEkrani : Form
