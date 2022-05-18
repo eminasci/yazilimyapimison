@@ -15,7 +15,7 @@ namespace Yazılımyapımı
 {
     public partial class frmSinavSorumlu : Form
     {
-        int a
+        int a;
         public frmSinavSorumlu()
         {
             InitializeComponent();
