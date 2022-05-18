@@ -11,11 +11,13 @@ using System.Data.SqlClient;
 using System.IO;
 using System.Drawing.Imaging;
 
+/*Kullandığımız isim alanlarını Using anahtar kelimesi ile tanımladık.*/
+
 namespace Yazılımyapımı
 {
     public partial class frmSinavSorumlu : Form
     {
-        int a
+        int a;
         public frmSinavSorumlu()
         {
             InitializeComponent();
@@ -29,6 +31,7 @@ namespace Yazılımyapımı
         OpenFileDialog dialog = new OpenFileDialog();
         //private string imgloc="";
         int soru_id_guncelle;
+        int id;
 
         private void button1_Click(object sender, EventArgs e)
         {
